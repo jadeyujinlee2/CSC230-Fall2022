@@ -6,3 +6,12 @@ CREATE TABLE books(
 	Pages INT,
 	Favorite INT
 );
+
+BULK INSERT books
+FROM 'C:\Users\akw02\CSC230-Fall2022\Art-Garfunkel-Library.csv'
+WITH
+(
+        FORMAT='CSV',
+        FIRSTROW=2
+)
+GO
